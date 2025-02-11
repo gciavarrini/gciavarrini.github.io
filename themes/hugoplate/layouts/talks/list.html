@@ -1,0 +1,26 @@
+{{ define "main" }}
+  {{ partial "page-header" . }} <!-- This renders the title once -->
+
+  <div class="container">
+    <!-- Render Talks Content -->
+    <div class="row justify-center">
+      <div class="md:col-10 lg:col-7 text-center">
+        {{ if .Params.image }}
+        {{ partial "image" (dict "Src" .Params.image "Context" .Page "Alt" .Title "Class" "mx-auto mb-6" "Size" "200x200") }}
+      {{ end }}       
+       <div class="content">{{ .Content }}</div> <!-- This renders content from _index.md -->
+      </div>
+    </div>
+
+    <!-- Render List of Talks -->
+    <div class="row">
+        {{ range (sort .RegularPages "Date" "desc") }}
+        <div class="col-12 mb-14"> <!-- Full-width cards -->
+          <hr>
+          {{ partial "components/talk-card" . }}
+          <hr>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+{{ end }}

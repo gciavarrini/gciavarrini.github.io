@@ -1,0 +1,8 @@
+<div class="social-icons">
+    {{ range .Params.socialIcons }}
+      <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="social-icon">
+        <img src="/images/icons/{{ .name }}.svg" alt="{{ .name | title }} icon" width="24" height="24">
+      </a>
+    {{ end }}
+  </div>
+  
