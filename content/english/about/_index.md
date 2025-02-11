@@ -7,7 +7,7 @@ draft: false
 ---
 
 
-Hello! I’m Gloria Ciavarrini, a Principal Software Engineer at Red Hat,
+Hello! I'm Gloria Ciavarrini, a Principal Software Engineer at Red Hat,
 based in beautiful Pisa, Italy. 
 
 
