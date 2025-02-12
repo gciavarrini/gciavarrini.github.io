@@ -1,0 +1,6 @@
+resources/_gen/
+public/
+vercel*
+node_modules
+netlify.toml
+amplify.yml
