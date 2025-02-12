@@ -34,6 +34,37 @@
   {{ end }}
   <!-- /Banner -->
 
+  <div style="margin-bottom: 20px; margin-left: 30%; margin-right: 30%"> <!-- Container for Latest Blog Post -->
+    <h3>Latest Blog Post</h3>
+    {{ $latestBlog := first 1 (where site.RegularPages "Section" "blog") }} <!-- Get the latest post in 'blog' section -->
+    {{ if gt (len $latestBlog) 0 }} <!-- Check if there are any posts -->
+        {{ $post := index $latestBlog 0 }} <!-- Extract the first post from the slice -->
+        <div class="latest-post-box" style="border: 1px solid #8d0404; padding: 20px; border-radius: 8px;">
+            <h5><a href="{{ $post.RelPermalink }}">{{ $post.Title }}</a></h5>
+            <p><strong>Date:</strong> {{ $post.Date.Format "January 2, 2006" }}</p> <!-- Display the date -->
+            <p>{{ $post.Params.excerpt }}</p> <!-- Show excerpt or summary -->
+            <a href="{{ $post.RelPermalink }}" class="read-more-button" style="display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: #8d0404; color: white; text-decoration: none; border-radius: 5px;">Read More</a>
+        </div>
+    {{ else }}
+        <p>No blog posts available.</p>
+    {{ end }}
+</div>
+
+<div style="margin-bottom: 20px;  margin-left: 30%; margin-right: 30%"> <!-- Container for Latest Talk -->
+    <h3>Latest Talk</h3>
+    {{ $latestTalk := first 1 (where site.RegularPages "Section" "talks") }} <!-- Get the latest talk in 'talks' section -->
+    {{ if gt (len $latestTalk) 0 }} <!-- Check if there are any talks -->
+        {{ $talk := index $latestTalk 0 }} <!-- Extract the first talk from the slice -->
+        <div class="latest-talk-box" style="border: 1px solid #025bb9; padding: 20px; border-radius: 8px;">
+            <h5><a href="{{ $talk.RelPermalink }}">{{ $talk.Title }}</a></h5>
+            <p>{{ $talk.Params.excerpt }}</p> <!-- Show excerpt or summary -->
+            <a href="{{ $talk.RelPermalink }}" class="read-more-button" style="display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: #025bb9; color: white; text-decoration: none; border-radius: 5px;">Read More</a>
+        </div>
+    {{ else }}
+        <p>No talks available.</p>
+    {{ end }}
+</div>
+
   <!-- Features -->
   {{ range $i, $e:= .Params.features }}
     <section class="section-sm {{ if (modBool $i 2) }}bg-gradient{{ end }}">
