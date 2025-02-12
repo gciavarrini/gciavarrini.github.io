@@ -1,5 +1,5 @@
 ---
 title: "Blog Posts"
-meta_title: ""
-description: "this is meta description"
+meta_title: "All Blog Posts"
+description: "Browse all blog posts."
 ---
