@@ -9,6 +9,11 @@
       "name": "linkedin",
       "icon": "fab fa-linkedin",
       "link": "https://www.linkedin.com/gloria-ciavarrini"
+    },
+    {
+      "name": "mastodon",
+      "icon": "fab fa-mastodon",
+      "link": "https://fosstodon.org/@gciavarrini"
     }
   ]
 }
