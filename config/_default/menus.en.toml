@@ -7,18 +7,18 @@ url = "/"
 weight = 1
 
 [[main]]
-name = "About"
-url = "/about"
-weight = 2
-
-[[main]]
 name = "Blog"
 url = "/blog"
-weight = 3
+weight = 2
 
 [[main]]
 name = "Talks"
 url = "/talks"
+weight = 3
+
+[[main]]
+name = "About"
+url = "/about"
 weight = 4
 
 # footer menu
@@ -27,12 +27,12 @@ name = "About"
 url = "/about"
 weight = 1
 
-[[footer]]
-name = "Elements"
-url = "/elements"
-weight = 2
+#[[footer]]
+#name = "Elements"
+#url = "/elements"
+#weight = 2
 
-[[footer]]
-name = "Privacy Policy"
-url = "/privacy-policy"
-weight = 3
+#[[footer]]
+#name = "Privacy Policy"
+#url = "/privacy-policy"
+#weight = 3
