@@ -64,6 +64,12 @@ jobs:
           echo "[services]" >> hugo.toml
           echo "[services.googleAnalytics]" >> hugo.toml
           echo "ID = '${GOOGLE_ANALYTICS_ID}'" >> hugo.toml
+      - name: Google verification code
+        env:
+          GOOGLE_VERIFICATION_CODE: ${{ secrets.GOOGLE_VERIFICATION_CODE }}
+        run: |
+          sed -i 's/google = ""   # Your verification code/google = "${GOOGLE_VERIFICATION_CODE}"/' config/_default/params.toml 
+
       - name: Build site
         run: npm run build
 
