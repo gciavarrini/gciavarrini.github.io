@@ -16,7 +16,7 @@ automatic generation of client and server code from OpenAPI specifications in
 over 50 programming languages. Through concrete examples, ideal for beginners,
 we will discover how open source is simplifying the integration between services
 
-{{< image src="images/linuxday24.jpg" caption="" alt="alter-text" height="" width="200" position="center" command="resize" option="q100" class="img-fluid" title="image title"  webp="false" >}}
+{{< image src="images/talks/linuxday24.jpg" caption="" alt="alter-text" height="" width="200" position="center" command="resize" option="q100" class="img-fluid" title="image title"  webp="false" >}}
 ## Presenter
 * Gloria Ciavarrini
 

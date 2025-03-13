@@ -5,7 +5,7 @@ description: "Learn how to securely integrate sensitive information in Hugo on
 GitHub Pages without exposing it in your repository. A simple and effective
 approach using GitHub Secrets." 
 date: 2025-02-12T10:00:00Z
-image: "/images/hugo_logo.png"
+image: "/images/blog/hugo_logo.png"
 categories: ["Web Development", "Hugo", "GitHub Actions"]
 author: "Gloria Ciavarrini"
 tags: ["hugo", "github-pages", "github-actions", "secrets"]

@@ -19,7 +19,7 @@ Serverless Workflow specifications. During this talk, we will see how to define
 and execute a workflow to manage a business process efficiently and
 transparently.
 
-{{< image src="images/linuxday_italia.png" caption="" alt="alter-text" height="" width="200" position="center" command="resize" option="q100" class="img-fluid" title="image title"  webp="false" >}}
+{{< image src="images/talks/linuxday_italia.png" caption="" alt="alter-text" height="" width="200" position="center" command="resize" option="q100" class="img-fluid" title="image title"  webp="false" >}}
 
 ## Presenter
 * Gloria Ciavarrini

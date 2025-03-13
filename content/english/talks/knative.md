@@ -19,7 +19,7 @@ will cover the fundamental concepts to start interacting with a cluster and to
 create and deploy Knative functions using the Knative CLI.
 
 
-{{< image src="images/linuxday_italia.png" caption="" alt="alter-text" height="" width="200" position="center" command="resize" option="q100" class="img-fluid" title="image title"  webp="false" >}}
+{{< image src="images/talks/linuxday_italia.png" caption="" alt="alter-text" height="" width="200" position="center" command="resize" option="q100" class="img-fluid" title="image title"  webp="false" >}}
 
 ## Presenter
 * Gloria Ciavarrini
