@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <article class="news-single">
+    <h1>{{ .Title }}</h1>
+    <p><strong>Date:</strong> {{ .Date.Format "January 2, 2006" }}</p>
+    {{ with .Params.image }}
+      <img src="{{ . }}" alt="{{ $.Title }}" style="max-width: 200px; height: auto; ">
+    {{ end }}
+    <div class="content" style="text-align: center;">
+      {{ .Content }}
+    </div>
+  </article>
+{{ end }}
