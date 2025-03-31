@@ -30,9 +30,31 @@
           </div>
         </div>
       </div>
+  </section>
+{{ end }}<!-- /Banner -->
+
+  <div style="margin-bottom: 20px; margin-left: 30%; margin-right: 30%"> <!-- Container for Latest News -->
+    <h3>News</h3>
+    <section class="news-section" style="border: 1px solid #5410ff; padding: 20px; border-radius: 8px; overflow: auto;">
+      <ul style="list-style-type: none; padding: 0;">
+        {{ range first 1 (where .Site.RegularPages "Type" "news") }}
+        <li>
+          {{ with .Params.image }} <!-- Check if an image is provided -->
+          <img src="{{ . }}" alt="{{ $.Title }}" style="float: left; max-width: 150px; height: auto; margin-right: 20px;"> <!-- Display the image -->
+          {{ else }}
+          <p style="float: left; margin-right: 20px;">No image available</p> <!-- Fallback if no image is provided -->
+          {{ end }}
+          <div style="overflow: hidden;">
+            <h5><a href="{{ .Permalink }}">{{ .Title }}</a></h5>
+            <p>{{ .Date.Format "January 2, 2006" }}</p>
+            <p>{{ .Summary }}</p>
+          </div>
+        </li>
+      </ul>
+      {{ end }}
     </section>
-  {{ end }}
-  <!-- /Banner -->
+  </div>
+
 
   <div style="margin-bottom: 20px; margin-left: 30%; margin-right: 30%"> <!-- Container for Latest Blog Post -->
     <h3>Latest Blog Post</h3>
