@@ -37,7 +37,7 @@
     <h3>News</h3>
     <section class="news-section" style="border: 1px solid #5410ff; padding: 20px; border-radius: 8px; overflow: auto;">
       <ul style="list-style-type: none; padding: 0;">
-        {{ range first 1 (where .Site.RegularPages "Type" "news") }}
+        {{ range first 1 ((where .Site.RegularPages "Type" "news").ByDate.Reverse) }}
         <li>
           {{ with .Params.image }} <!-- Check if an image is provided -->
           <img src="{{ . }}" alt="{{ $.Title }}" style="float: left; max-width: 150px; height: auto; margin-right: 20px;"> <!-- Display the image -->
@@ -74,12 +74,13 @@
 
 <div style="margin-bottom: 20px;  margin-left: 30%; margin-right: 30%"> <!-- Container for Latest Talk -->
     <h3>Latest Talk</h3>
-    {{ $latestTalk := first 1 (where site.RegularPages "Section" "talks") }} <!-- Get the latest talk in 'talks' section -->
+    {{ $latestTalk := first 1 ((where site.RegularPages "Section" "talks").ByDate.Reverse) }} <!-- Get the latest talk in 'talks' section -->
     {{ if gt (len $latestTalk) 0 }} <!-- Check if there are any talks -->
         {{ $talk := index $latestTalk 0 }} <!-- Extract the first talk from the slice -->
         <div class="latest-talk-box" style="border: 1px solid #025bb9; padding: 20px; border-radius: 8px;">
             <h5><a href="{{ $talk.RelPermalink }}">{{ $talk.Title }}</a></h5>
-            <p>{{ $talk.Params.excerpt }}</p> <!-- Show excerpt or summary -->
+            <p><strong>Date:</strong> {{ $talk.Date.Format "January 2, 2006" }}</p>
+            <p>{{ $talk.Params.summary | default $talk.Summary }}</p>
             <a href="{{ $talk.RelPermalink }}" class="read-more-button" style="display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: #025bb9; color: white; text-decoration: none; border-radius: 5px;">Read More</a>
         </div>
     {{ else }}
