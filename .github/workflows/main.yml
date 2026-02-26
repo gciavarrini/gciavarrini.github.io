@@ -42,7 +42,7 @@ jobs:
           && sudo tar -C /usr/local -xzf ${{ runner.temp }}/go.deb
 
       - name: Checkout
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v6.0.2
         with:
           submodules: recursive
           fetch-depth: 0
