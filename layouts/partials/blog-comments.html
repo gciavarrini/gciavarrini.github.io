@@ -1,0 +1,9 @@
+{{/* Giscus takes precedence when configured */}}
+{{ $giscus := site.Params.giscus }}
+{{ if and $giscus (ne false $giscus.enable) $giscus.repo $giscus.repo_id $giscus.category_id }}
+  {{ partial "giscus" . }}
+{{ else if site.Config.Services.Disqus.Shortname }}
+  <div class="mt-20">
+    {{ template "_internal/disqus.html" . }}
+  </div>
+{{ end }}

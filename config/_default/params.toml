@@ -103,6 +103,19 @@ map_longitude = "-0.1622023"
 map_marker = "images/marker.png"
 
 
+# Giscus comments (https://giscus.app/)
+# Get repo-id and category-id from https://giscus.app/ after enabling Discussions
+# and installing the giscus app on your repo
+[giscus]
+enable = true
+repo = "gciavarrini/gciavarrini.github.io"
+repo_id = "R_kgDOHXOGBA"
+category = "Announcements"
+category_id = "DIC_kwDOHXOGBM4C3P9h"
+mapping = "pathname"
+theme = "preferred_color_scheme"
+lang = "en"
+
 # Subscription
 [subscription]
 enable = false
