@@ -37,6 +37,6 @@
     }
   },
   "dependencies": {
-    "postcss-import": "^16.1.0"
+    "postcss-import": "^16.1.1"
   }
 }
