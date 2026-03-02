@@ -1,0 +1,8 @@
+<li class="news-card">
+  {{ with .Params.image }}
+    <img src="{{ . }}" class="mx-auto mb-4 block max-w-[100px]" alt="{{ $.Title }}">
+  {{ end }}
+  <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+  <p>{{ .Date.Format "January 2, 2006" }}</p>
+  <p>{{ .Summary }}</p>
+</li>

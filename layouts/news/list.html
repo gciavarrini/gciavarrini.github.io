@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <section class="news-list section">
+    <div class="container text-center">
+      <h1 class="mb-10">News</h1>
+      <ul class="space-y-10 list-none p-0">
+        {{ range .Pages }}
+          {{ partial "components/news-card" . }}
+        {{ end }}
+      </ul>
+    </div>
+  </section>
+{{ end }}

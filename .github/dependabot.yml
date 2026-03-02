@@ -14,6 +14,11 @@ updates:
     schedule:
       interval: "monthly"
     open-pull-requests-limit: 5
+    ignore:
+      # Tailwind v4 and tailwind-bootstrap-grid v7 require major migration;
+      # Hugoplate theme is built for Tailwind v3
+      - dependency-name: "tailwindcss"
+      - dependency-name: "tailwind-bootstrap-grid"
 
   - package-ecosystem: "github-actions"
     directory: "/"
