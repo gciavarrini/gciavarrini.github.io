@@ -57,7 +57,7 @@ enable = true
 source = 'assets/watching/hugo_stats\.json'
 target = 'style\.css'
 [[build.cachebusters]]
-source = '(postcss|tailwind)\.config\.js'
+source = 'assets/css/generated-theme\.css'
 target = 'css'
 [[build.cachebusters]]
 source = 'assets/.*\.(js|ts|jsx|tsx)'
