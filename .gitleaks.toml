@@ -1,0 +1,16 @@
+# Gitleaks allowlist (e.g. rh-gitleaks, PwnedAlert per org policy).
+# Upstream Hugoplate demo Google Maps key (same string can appear in
+# themes/.../exampleSite and historically in root config/_default/params.toml).
+
+[allowlist]
+description = "Hugoplate upstream demo Google Maps key (false positive)"
+
+paths = [
+  '''themes/hugoplate/exampleSite/config/_default/params\.toml$''',
+]
+
+# Match the exact known demo value only (not a path: old commits used it in
+# config/_default/params.toml too).
+regexes = [
+  '''AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU''',
+]
