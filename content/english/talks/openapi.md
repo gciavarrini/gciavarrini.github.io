@@ -28,5 +28,5 @@ we will discover how open source is simplifying the integration between services
 
 ## Resources
 
-* [Slides](https://github.com/gciavarrini/linuxday-2023/blob/main/sonataflow/slides/SonataFlow.pdf)
-* [Demo code](https://github.com/gciavarrini/linuxday-2023/tree/main/sonataflow/demo)
+* [Slides](https://github.com/gciavarrini/linuxday-2024/blob/main/slides/slides_codice_a_portata_di_click.pdf)
+* [Demo code](https://github.com/gciavarrini/linuxday-2024/tree/main/linuxday-react-app)
