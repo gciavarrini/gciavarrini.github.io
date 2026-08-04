@@ -1,5 +1,11 @@
 # Dependabot updates for Hugo modules, npm, and GitHub Actions
 # https://docs.github.com/en/code-security/dependabot/dependabot-version-updates
+#
+# Strategy:
+# - Monthly cadence (security updates still open immediately)
+# - Patch + minor grouped into one PR per ecosystem
+# - Majors stay as individual PRs for careful review
+# - Cooldown delays version bumps after a release (not security updates)
 
 version: 2
 updates:
@@ -8,20 +14,64 @@ updates:
     schedule:
       interval: "monthly"
     open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "go"
+    commit-message:
+      prefix: "chore(deps)"
+      include: "scope"
+    cooldown:
+      default-days: 7
+      semver-major-days: 14
+    groups:
+      gomod-patch-minor:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
 
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "monthly"
     open-pull-requests-limit: 5
-    ignore:
-      # Tailwind v4 and tailwind-bootstrap-grid v7 require major migration;
-      # Hugoplate theme is built for Tailwind v3
-      - dependency-name: "tailwindcss"
-      - dependency-name: "tailwind-bootstrap-grid"
+    labels:
+      - "dependencies"
+      - "javascript"
+    commit-message:
+      prefix: "chore(deps)"
+      prefix-development: "chore(deps-dev)"
+      include: "scope"
+    cooldown:
+      default-days: 7
+      semver-major-days: 14
+    groups:
+      npm-patch-minor:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
 
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "monthly"
     open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "github_actions"
+    commit-message:
+      prefix: "chore(deps)"
+      include: "scope"
+    cooldown:
+      default-days: 7
+      semver-major-days: 14
+    groups:
+      actions-patch-minor:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
